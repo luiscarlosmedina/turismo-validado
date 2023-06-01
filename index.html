@@ -62,8 +62,9 @@
                         <option value="0">Origen...</option>
                         <option value="1">Bogota</option>
                         <option value="2">Cali</option>
-                        <option value="3">Manizales</option>
-                        <option value="4">Medellin</option>
+                        <option value="3">Medellin</option>
+                        <option value="4">Manizales</option>
+                        <option value="5">Barranquilla</option>
                     </select>
                 </div>
                 <div class="base">
@@ -72,8 +73,9 @@
                         <option value="0">Destino...</option>
                         <option value="1">Bogota</option>
                         <option value="2">Cali</option>
-                        <option value="3">Manizales</option>
-                        <option value="4">Medellin</option>
+                        <option value="3">Medellin</option>
+                        <option value="4">Manizales</option>
+                        <option value="5">Barranquilla</option>
                     </select>
                 </div>
             </div>
@@ -84,6 +86,10 @@
 
         <div class="responde" id="v2">
             <table>
+                <tr>
+                    <td>Nombre</td>
+                    <td id="nombre"></td>
+                </tr>
                 <tr>
                     <td>Tarifa tiquete</td>
                     <td id="tiquete"></td>
@@ -102,11 +108,11 @@
                 </tr>
             </table>
             <div class="cajon">
+                <input class="boton" type="submit" value="Imprimir" onclick="imprime()">
                 <input class="boton" type="submit" value="Regresar" onclick="salir()">
             </div>
        </div>
     </div>
-    <script src="./logica/lg_estilo.js"></script>
     <script src="./logica/revisor.js"></script>
 </body>
 </html>

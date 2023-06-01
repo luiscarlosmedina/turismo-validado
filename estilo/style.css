@@ -9,7 +9,7 @@ body{
     width: 30%;
     margin: auto;
     border-radius: 25px;
-    height: 75vh;
+    height: 85vh;
     box-shadow: 6px 6em 3em 3px rgba(0,0,0,0.1), 0 0 0 2px rgb(255,255,255), 0.3em 0.3em 1em rgb(0 0 0 / 58%);
     margin-top: 70px;
 }
@@ -95,6 +95,16 @@ hr{
     width: 80%;
     margin: 0px auto;
     padding: 10px;
+}
+@media print {
+    body *{
+        visibility: hidden;
+    }
+    .cj-form >.logo > img , .responde > table *{
+        visibility: visible;
+        font-size: 21px;
+        size: 70;
+    }
 }
   
   
