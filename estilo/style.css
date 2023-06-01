@@ -1,0 +1,104 @@
+body{
+    background:url(../img/fondo.png) no-repeat fixed center;
+    background-size: cover;
+}
+.cj-form{
+    display: flex;
+    flex-direction: column;
+    background:#ffffffe0;
+    width: 30%;
+    margin: auto;
+    border-radius: 25px;
+    height: 75vh;
+    box-shadow: 6px 6em 3em 3px rgba(0,0,0,0.1), 0 0 0 2px rgb(255,255,255), 0.3em 0.3em 1em rgb(0 0 0 / 58%);
+    margin-top: 70px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+
+}
+.logo>img{
+    width: 45%;
+}
+hr{
+    width: 80%;
+    border: 1px red solid;
+}
+.form{
+    width: 80%;
+    margin: 0px auto;
+    padding: 10px;
+    display: block;
+}
+.cajon-uno{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.base{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+.cajon{
+    display: flex;
+    flex-direction: column;
+}
+.t_info{
+    color: rgb(161, 160, 160);
+    font-weight: bold;
+    font-size: 1.125rem;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.2px;
+}
+.info{
+    
+    padding: 5px;
+    border:rgb(161, 160, 160) 2px solid;
+    font-size: 1.125rem;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.2px;
+}
+.info:focus{
+    outline: none;
+    border: rgb(104, 149, 160) 2px solid;
+}
+.base:focus-within label, .cajon:focus-within label{
+    color: rgb(104, 149, 160);
+}
+.cajon>.boton{
+    margin-top: 10px;
+}
+.boton{
+    padding: 10px;
+    font-size: 1.125rem;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.2px;
+    background: red;
+    color: white;
+    outline: none;
+    border: none;
+}
+.boton:hover{
+    background: #750004;
+    cursor: pointer;
+}
+.responde{
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0px auto;
+    padding: 10px;
+}
+  
+  
+  
+  
+  
+  

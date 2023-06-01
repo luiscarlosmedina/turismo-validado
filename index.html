@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avianca</title>
+    <link rel="shortcut icon" href="./img/icono.png">
+    <link rel="stylesheet" href="./estilo/style.css">
+</head>
+
+<body>
+    <div class="cj-form">
+        <div class="logo">
+            <img src="./img/logo.png" alt="logo avianca">
+        </div>
+        <hr />
+        <div class="form" id="v1">
+            <div class="cajon-uno">
+                <div class="base">
+                    <label class="t_info" for="nonbre">Nombre</label>
+                    <input class="info" type="text" name="nombre" id="nom">
+                </div>
+                <div class="base">
+                    <label class="t_info" for="apellido">Apellido</label>
+                    <input class="info" type="text" name="apellido" id="ape">
+                </div>
+            </div>
+            <div class="cajon">
+                <label class="t_info" for="direccion">Direccion</label>
+                <input class="info" type="text" name="direccion" id="dir">
+            </div>
+            <div class="cajon">
+                <label class="t_info" for="correo">Correo</label>
+                <input class="info" type="email" name="correo" id="cor">
+            </div>
+            <div class="cajon-uno">
+                <div class="base">
+                    <label class="t_info" for="Edad">Edad</label>
+                    <input class="info" type="number" min="0" max="100" name="Edad" id="eda">
+                </div>
+                <div class="base">
+                    <label class="t_info" for="Peso">Peso</label>
+                    <input class="info" type="number" min="1" max="100" name="Peso" placeholder="10 Kg" id="pes">
+                </div>
+            </div>
+            <div class="cajon">
+                <label class="t_info" for="Genero">Genero</label>
+                <select class="info" name="Genero" id="gen">
+                    <option value="0">Genero...</option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                    <option value="3">Transgénero</option>
+                    <option value="4">Persona Queer</option>
+                </select>
+            </div>
+            <div class="cajon-uno">
+                <div class="base">
+                    <label class="t_info" for="Origen">Origen</label>
+                    <select class="info" name="Origen" id="ori">
+                        <option value="0">Origen...</option>
+                        <option value="1">Bogota</option>
+                        <option value="2">Cali</option>
+                        <option value="3">Manizales</option>
+                        <option value="4">Medellin</option>
+                    </select>
+                </div>
+                <div class="base">
+                    <label class="t_info" for="Destino">Destino</label>
+                    <select class="info" name="Destino" id="des">
+                        <option value="0">Destino...</option>
+                        <option value="1">Bogota</option>
+                        <option value="2">Cali</option>
+                        <option value="3">Manizales</option>
+                        <option value="4">Medellin</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cajon">
+                <input class="boton" type="submit" value="Enviar" onclick="validar()">
+            </div>
+        </div>
+
+        <div class="responde" id="v2">
+            <table>
+                <tr>
+                    <td>Tarifa tiquete</td>
+                    <td id="tiquete"></td>
+                </tr>
+                <tr>
+                    <td>Tarifa aeroportuaria</td>
+                    <td id="ipto"></td>
+                </tr>
+                <tr>
+                    <td>Tarifa peso extra</td>
+                    <td id="equi"></td>
+                </tr>
+                <tr>
+                    <td>Valor total</td>
+                    <td id="total"></td>
+                </tr>
+            </table>
+            <div class="cajon">
+                <input class="boton" type="submit" value="Regresar" onclick="salir()">
+            </div>
+       </div>
+    </div>
+    <script src="./logica/lg_estilo.js"></script>
+    <script src="./logica/revisor.js"></script>
+</body>
+</html>
