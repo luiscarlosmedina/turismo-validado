@@ -85,7 +85,7 @@ hr{
     border: none;
 }
 .boton:hover{
-    background: #750004;
+    background: #750005;
     cursor: pointer;
 }
 .responde{
@@ -96,6 +96,14 @@ hr{
     margin: 0px auto;
     padding: 10px;
 }
+table{
+    margin: 30% 0;
+}
+@media screen and (max-width: 800px){
+    .cj-form{
+        width: auto;
+    }
+}
 @media print {
     body *{
         visibility: hidden;
@@ -105,10 +113,4 @@ hr{
         font-size: 21px;
         size: 70;
     }
-}
-  
-  
-  
-  
-  
-  
+}   
