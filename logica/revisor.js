@@ -5,11 +5,23 @@ function validar() {
     let apellido = document.getElementById("ape");
     let direccion = document.getElementById("dir");
     let correo = document.getElementById("cor");
-    let edad = document.getElementById("eda");
+    let fecha = new Date(document.getElementById("fecha").value);
     let peso = document.getElementById("pes");
     let genero = document.getElementById("gen");
     let origen = document.getElementById("ori");
     let destino = document.getElementById("des");
+
+    //calcular la edad a partir de la fecha de nacimiento
+    let hoy = new Date();
+    let edad = hoy.getFullYear() - fecha.getFullYear();
+    let diferenciaMeses = hoy.getMonth() - fecha.getMonth()
+    if (diferenciaMeses < 0 || (diferenciaMeses === 0 && hoy.getDate() < fecha.getDate())) {
+        edad--
+    }
+    let diferenciaDias = hoy.getDay() - fecha.getDay()
+    if (diferenciaDias < 0 || (diferenciaDias === 0 && hoy.getDate() < fecha.getDate())) {
+        edad--
+    }
 
     //validadores regex
     let ValidaCorreos = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
@@ -19,7 +31,7 @@ function validar() {
 
 
     //concatenar los datos en un array
-    let informacion = [nombre.value, apellido.value, direccion.value, correo.value, edad.value, peso.value, genero.value, origen.value, destino.value]
+    let informacion = [nombre.value, apellido.value, direccion.value, correo.value, edad, peso.value, genero.value, origen.value, destino.value]
 
     //realizar validaciones y otorgarles un estado
     let val = [];
@@ -42,7 +54,7 @@ function validar() {
     if (!ValidaCorreos.test(informacion[3])) {
         val[3] = false;
     }
-    if (!ValidaEdad.test(parseFloat(informacion[4])) || parseFloat(informacion[4]) < 0) {
+    if (!ValidaEdad.test(informacion[4]) || informacion[4] < 0) {
         val[4] = false;
     }
     if (parseFloat(informacion[5]) < 0 || parseFloat(informacion[5]) > 70) {
@@ -81,7 +93,7 @@ function validar() {
                     cont++;
                     break;
                 case 4:
-                    edad.style.border = "red 2px solid";
+                    document.getElementById("fecha").style.border = "red 2px solid";
                     cont++;
                     break;
                 case 5:
@@ -116,6 +128,7 @@ function resultado() {
     let vist1 = document.getElementById("v1");
     let vist2 = document.getElementById("v2");
     let nombre = document.getElementById("nombre");
+    let laedad = document.getElementById("edad");
     let tiquete = document.getElementById("tiquete");
     let impuesto = document.getElementById("ipto");
     let equipaje = document.getElementById("equi");
@@ -127,6 +140,7 @@ function resultado() {
 
     //mostrar los datos al usuario nombre y apellido
     nombre.innerText = info[0] + " " + info[1];
+    laedad.innerHTML = info[4] + " años";
 
     //mostrar valor del tiquete
     let tq = 0;
